@@ -1,11 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodtruck - Yum yum gim me sum</title>
+
+    <!-- Externa CSS-filer -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+
+    <!-- JavaScript-filer -->
+    <script type="module" src="/javascript/checkout.js"></script>
+	<script type="module" src="/javascript/menu.js"></script>
+	<script type="module" src="/javascript/script.js"></script>
 </head>
+
 <body>
-	
+
+    <!-- Header -->
+    <header>
+        <h1>Välkommen till Yum yum gim me sum!</h1>
+        <p>Din favorit foodtruck i Karlstad.</p>
+    </header>
+
+    <!-- Meny -->
+    <section class="menu">
+        <h2>Vår meny</h2>
+        <ul>
+            <li>
+                <h3>Wonton 1</h3>
+                <p>En läcker kinesisk dumpling fylld med smak.</p>
+                <p><strong>Pris: 45 SEK</strong></p>
+                <button class="add-to-cart" data-product="Wonton 1" data-price="45">Lägg till i varukorgen</button>
+            </li>
+            <li>
+                <h3>Wonton 2</h3>
+                <p>En annan variant med läcker fyllning.</p>
+                <p><strong>Pris: 50 SEK</strong></p>
+                <button class="add-to-cart" data-product="Wonton 2" data-price="50">Lägg till i varukorgen</button>
+            </li>
+            <li>
+                <h3>Wonton 3</h3>
+                <p>Vegetarisk dumpling för den som gillar grönt.</p>
+                <p><strong>Pris: 40 SEK</strong></p>
+                <button class="add-to-cart" data-product="Wonton 3" data-price="40">Lägg till i varukorgen</button>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Varukorg -->
+    <section class="cart">
+        <h3>Din varukorg</h3>
+        <ul class="cart-items">
+            <!-- Produkterna kommer att listas här -->
+        </ul>
+        <p><strong>Total: <span class="total-price">0 SEK</span></strong></p>
+        <button class="checkout" onclick="checkout()">Gå till kassan</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Yum yum gim me sum. All Rights Reserved.</p>
+    </footer>
+
 </body>
+
 </html>
