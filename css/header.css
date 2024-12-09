@@ -1,0 +1,26 @@
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #c0392b;
+}
+
+/* Anpassa icon bilden */
+header img {
+    width: 120px; /* Bildens bredd */
+    height: auto; /* Automatisk höjd för att behålla bildens proportioner */
+}
+
+/* Stil för rubriken */
+header h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2em;
+    color: #333;
+    top: 50%;
+}
+
+img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;      /* Se till att bilden fyller hela cirkeln utan att bli förvrängd */
+}

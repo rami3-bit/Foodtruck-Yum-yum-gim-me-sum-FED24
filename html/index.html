@@ -13,14 +13,15 @@
 	<link rel="stylesheet" href="/css/header.css">
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- JavaScript-filer -->
     <script type="module" src="/javascript/checkout.js"></script>
 	<script type="module" src="/javascript/menu.js"></script>
 	<script type="module" src="/javascript/script.js"></script>
+
+
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -28,36 +29,39 @@
 <body>
 
     <!-- Header -->
-    <header>
-        <h1>Välkommen till Yum yum gim me sum!</h1>
-        <p>Din favorit foodtruck i Karlstad.</p>
+	<header>
+        <img src="images/yum.jpg" alt="icon">
+        <h1>Välkommen till Yum Yum Gim Me Sum!</h1>
     </header>
-	<img src="file:///C:/Users/ramie/Downloads/DALL%C2%B7E%202024-12-09%2010.47.01%20-%20A%20playful%20and%20inviting%20icon%20for%20'Yum%20Yum%20Gim%20Me%20Sum!'%20with%20a%20child-friendly%20and%20food%20truck%20theme.%20The%20design%20should%20feature%20a%20cute,%20colorful%20food%20truc.webp" alt="Beskrivning av bilden">
+
 
     <!-- Meny -->
-    <section class="menu">
-        <h2>Vår meny</h2>
-        <ul>
-            <li>
-                <h3>Wonton 1</h3>
-                <p>En läcker kinesisk dumpling fylld med smak.</p>
-                <p><strong>Pris: 45 SEK</strong></p>
-                <button class="add-to-cart" data-product="Wonton 1" data-price="45">Lägg till i varukorgen</button>
-            </li>
-            <li>
-                <h3>Wonton 2</h3>
-                <p>En annan variant med läcker fyllning.</p>
-                <p><strong>Pris: 50 SEK</strong></p>
-                <button class="add-to-cart" data-product="Wonton 2" data-price="50">Lägg till i varukorgen</button>
-            </li>
-            <li>
-                <h3>Wonton 3</h3>
-                <p>Vegetarisk dumpling för den som gillar grönt.</p>
-                <p><strong>Pris: 40 SEK</strong></p>
-                <button class="add-to-cart" data-product="Wonton 3" data-price="40">Lägg till i varukorgen</button>
-            </li>
-        </ul>
-    </section>
+
+	<div class="menu">
+		<section>
+			<h2>Vår meny</h2>
+			<ul>
+				<li>
+					<h3>Wonton 1</h3>
+					<p>En läcker kinesisk dumpling fylld med smak.</p>
+					<p><strong>Pris: 45 SEK</strong></p>
+					<button class="add-to-cart" data-product="Wonton 1" data-price="45">Lägg till i varukorgen</button>
+				</li>
+				<li>
+					<h3>Wonton 2</h3>
+					<p>En annan variant med läcker fyllning.</p>
+					<p><strong>Pris: 50 SEK</strong></p>
+					<button class="add-to-cart" data-product="Wonton 2" data-price="50">Lägg till i varukorgen</button>
+				</li>
+				<li>
+					<h3>Wonton 3</h3>
+					<p>Vegetarisk dumpling för den som gillar grönt.</p>
+					<p><strong>Pris: 40 SEK</strong></p>
+					<button class="add-to-cart" data-product="Wonton 3" data-price="40">Lägg till i varukorgen</button>
+				</li>
+			</ul>
+		</section>
+	</div>
 
     <!-- Varukorg -->
     <section class="cart">
@@ -96,8 +100,8 @@
 		</p>
 		
 		<p class="footer-links">
-			<a href="/privacy-policy" target="_blank">Privacy Policy</a> | 
-			<a href="/terms-of-service" target="_blank">Terms of Service</a>
+			<a href="#"> Privacy Policy</a> | 
+			<a href="#"> Terms of Service </a>
 		</p>
 	</footer>
 	
