@@ -6,8 +6,8 @@ header {
 
 /* Anpassa icon bilden */
 header img {
-    width: 120px; /* Bildens bredd */
-    height: auto; /* Automatisk höjd för att behålla bildens proportioner */
+    width: 120px; 
+    height: auto;
 }
 
 /* Stil för rubriken */

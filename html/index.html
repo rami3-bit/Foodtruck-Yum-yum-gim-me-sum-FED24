@@ -35,34 +35,119 @@
     </header>
 
 
-    <!-- Meny -->
 
 	
-		<section>
-			<div class="menu"></div>
-				<h2>Vår meny</h2>
-				<ul>
-					<li>
-						<h3>Wonton 1</h3>
-						<p>En läcker kinesisk dumpling fylld med smak.</p>
-						<p><strong>Pris: 45 SEK</strong></p>
-						<button class="add-to-cart" data-product="Wonton 1" data-price="45">Lägg till i varukorgen</button>
-					</li>
-					<li>
-						<h3>Wonton 2</h3>
-						<p>En annan variant med läcker fyllning.</p>
-						<p><strong>Pris: 50 SEK</strong></p>
-						<button class="add-to-cart" data-product="Wonton 2" data-price="50">Lägg till i varukorgen</button>
-					</li>
-					<li>
-						<h3>Wonton 3</h3>
-						<p>Vegetarisk dumpling för den som gillar grönt.</p>
-						<p><strong>Pris: 40 SEK</strong></p>
-						<button class="add-to-cart" data-product="Wonton 3" data-price="40">Lägg till i varukorgen</button>
-					</li>
-				</ul>
+	<section>
+		<div class="menu">
+		  <header>
+			<h2>Vår meny och drycker</h2>
+		  </header>
+									  <!-- wonton Meny -->
+		  
+		<div class="wonton">
+		  <ul>
+			<li>
+			  <h3>Wonton 1</h3>
+			  <p>En läcker kinesisk dumpling fylld med smak.</p>
+			  <p><strong>Pris: 45 SEK</strong></p>
+			  <div class="quantity-controls">
+				<button class="minus" data-product="Wonton 1">-</button>
+				<input type="number" id="quantity-wonton1" name="quantity-wonton1" value="0" min="0">
+				<button class="plus" data-product="Wonton 1">+</button>
+			  </div>
+			  <button class="add-to-cart" data-product="Wonton 1" data-price="45">Lägg till i varukorgen</button>
+			  <button class="remove-from-cart" data-product="Wonton 1" data-price="45">Ta bort från varukorgen</button>
+			</li>
+			<li>
+			  <h3>Wonton 2</h3>
+			  <p>En annan variant med läcker fyllning.</p>
+			  <p><strong>Pris: 50 SEK</strong></p>
+			  <div class="quantity-controls">
+				<button class="minus" data-product="Wonton 2">-</button>
+				<input type="number" id="quantity-wonton2" name="quantity-wonton2" value="0" min="0">
+				<button class="plus" data-product="Wonton 2">+</button>
+			  </div>
+			  <button class="add-to-cart" data-product="Wonton 2" data-price="50">Lägg till i varukorgen</button>
+			  <button class="remove-from-cart" data-product="Wonton 2" data-price="50">Ta bort från varukorgen</button>
+			</li>
+			<li>
+			  <h3>Wonton 3</h3>
+			  <p>Vegetarisk dumpling för den som gillar grönt.</p>
+			  <p><strong>Pris: 40 SEK</strong></p>
+			  <div class="quantity-controls">
+				<button class="minus" data-product="Wonton 3">-</button>
+				<input type="number" id="quantity-wonton3" name="quantity-wonton3" value="0" min="0">
+				<button class="plus" data-product="Wonton 3">+</button>
+			  </div>
+			  <button class="add-to-cart" data-product="Wonton 3" data-price="40">Lägg till i varukorgen</button>
+			  <button class="remove-from-cart" data-product="Wonton 3" data-price="40">Ta bort från varukorgen</button>
+			</li>
+		</div>
+	  
+				<!-- Såser till Wonton -->
+
+			<div class="sauces">
+				<li>
+					<h3>Såser till Wonton</h3>
+					<ul>
+						<li>Soya-sås</li>
+						<li>Sesamsås</li>
+						<li>Chilisås</li>
+						<li>Vietnamesisk hoisinsås</li>
+						<li>Syrad vinäger (risvinäger)</li>
+						<li>Plommonsås</li>
+						<li>Sweet and sour-sås</li>
+					</ul>
+				</li>
 			</div>
-		</section>
+
+
+			<!-- Drinks -->
+
+		<div class="drinks">
+			<li>
+			  <h3>Cola</h3>
+			  <p>Klassisk cola, den perfekta drycken till maten.</p>
+			  <p><strong>Pris: 25 SEK</strong></p>
+			  <div class="quantity-controls">
+				<button class="minus" data-product="Cola">-</button>
+				<input type="number" id="quantity-cola" name="quantity-cola" value="0" min="0">
+				<button class="plus" data-product="Cola">+</button>
+			  </div>
+
+			  <button class="add-to-cart" data-product="Cola" data-price="25">Lägg till i varukorgen</button>
+			  <button class="remove-from-cart" data-product="Cola" data-price="25">Ta bort från varukorgen</button>
+			</li>
+			<li>
+			  <h3>Sprite</h3>
+			  <p>Frisk citron-lime smak för de varma dagarna.</p>
+			  <p><strong>Pris: 25 SEK</strong></p>
+			  <div class="quantity-controls">
+				<button class="minus" data-product="Sprite">-</button>
+				<input type="number" id="quantity-sprite" name="quantity-sprite" value="0" min="0">
+				<button class="plus" data-product="Sprite">+</button>
+			  </div>
+			  <button class="add-to-cart" data-product="Sprite" data-price="25">Lägg till i varukorgen</button>
+			  <button class="remove-from-cart" data-product="Sprite" data-price="25">Ta bort från varukorgen</button>
+			</li>
+			<li>
+			  <h3>Vatten</h3>
+			  <p>Rent vatten för en fräsch paus.</p>
+			  <p><strong>Pris: 15 SEK</strong></p>
+			  <div class="quantity-controls">
+				<button class="minus" data-product="Vatten">-</button>
+				<input type="number" id="quantity-vatten" name="quantity-vatten" value="0" min="0">
+				<button class="plus" data-product="Vatten">+</button>
+			  </div>
+			  <button class="add-to-cart" data-product="Vatten" data-price="15">Lägg till i varukorgen</button>
+			  <button class="remove-from-cart" data-product="Vatten" data-price="15">Ta bort från varukorgen</button>
+			</li>
+		  </ul>
+		</div>
+	  </section>
+	  
+	  
+	  
 	
 
     <!-- Varukorg -->
@@ -82,13 +167,13 @@
 		<p class="footer-text">&copy; Yum Yum Gim Me Sum. Alla rättigheter reserverade.</p>
 		
 		<div class="footer-contact">
-			<span>📍 Göteborg</span> | 
+			<span>📍 Göteborgsvägen 01</span> | 
 			<span>📞 000-000000</span> | 
 			<span>📧 Yumtruck@food.se</span>
 		</div>
 	
 		<div class="footer-hours">
-			<span>🕒 Öppettider: Mån-Sön, 11 AM - 8 PM</span>
+			<span>🕒 Öppettider: Mån-Sön, 11.00 - 20.00 </span>
 		</div>
 	
 		<div class="footer-cta">
