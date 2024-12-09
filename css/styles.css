@@ -1,9 +1,16 @@
+
 body {
-	background-color: grey;
-	margin: 0;	
+    background-color:  #FFEB3B;
+	margin: 0;
 }
 
+	
+
+	
 header, section, footer {
 	display: flex;
 	justify-content: center;
 }
+
+
+  
