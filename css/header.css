@@ -4,13 +4,13 @@ header {
     background-color: #c0392b;
 }
 
-/* Anpassa icon bilden */
+/*  icon  yumtruck*/
 header img {
     width: 120px; 
     height: auto;
 }
 
-/* Stil för rubriken */
+
 header h1 {
     font-family: 'Arial', sans-serif;
     font-size: 2em;
@@ -19,8 +19,5 @@ header h1 {
 }
 
 img {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    object-fit: cover;      /* Se till att bilden fyller hela cirkeln utan att bli förvrängd */
+    border-radius: 60%;
 }

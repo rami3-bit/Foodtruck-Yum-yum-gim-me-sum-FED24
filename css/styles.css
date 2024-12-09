@@ -1,171 +1,238 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+	font-family: "Roboto", sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #FFF8E1; 
+	color: #333;
+  }
+  
+  /* Header - General Header Styling */
+  header {
+	background-color: #B22222;
+	color: white;
+	padding: 15px;
+	text-align: center;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+	margin: 0;
+	font-size: 2em;
+	text-transform: uppercase;
+  }
+  
+  /* Menu Section */
+  .menu {
+	background-color: #F5F1F1; 
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	font-family: 'SimHei', sans-serif;
+	color: #333;
+	display: flex;
+	flex-direction: column;
+	align-items: center; 
+	justify-content: center; 
+	max-width: 800px;
+	margin: 50px auto; 
 
-h2 {
-    text-align: center;
-    font-size: 2em;
-    margin-top: 20px;
-    color: #333;
-    padding: 10px 0;
-}
-
-/* Menysektionen */
-.menu {
-    display: grid;  /* Changed to grid for better alignment of menu items */
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));  /* Adjusted grid layout */
-    gap: 20px;  /* Space between grid items */
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Menu item styles */
-.menu-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    margin: 5px;
-    width: 100%; /* Adjusted to take full width in grid */
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 180px; /* Restrict height to keep items compact */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.menu-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.menu-item h3 {
-    font-size: 1.2em;
-    color: #333;
-    margin-bottom: 8px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #ddd;
-}
-
-.menu-item p {
-    font-size: 0.9em;
-    color: #555;
-    margin-bottom: 10px;
-    flex-grow: 1; /* Fills the space to balance the layout */
-}
-
-.menu-item strong {
-    font-weight: bold;
-    color: #000;
-}
-
-.menu-item ul {
-    padding-left: 20px;
-    margin-bottom: 10px;
-}
-
-.menu-item ul li {
-    list-style-type: square;
-    color: #555;
-    margin: 4px 0;
-}
-
-/* Quantity control buttons */
-.quantity-controls {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 5px;
-}
-
-.quantity-controls input {
-    width: 35px;
-    text-align: center;
-    padding: 3px;
-    font-size: 0.9em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.quantity-controls button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 4px 8px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-}
-
-.quantity-controls button:hover {
-    background-color: #45a049;
-}
-
-button.add-to-cart,
-button.remove-from-cart {
-    display: block;
-    width: 100%;
-    margin-top: 5px;
-    padding: 8px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button.add-to-cart:hover {
-    background-color: #0056b3;
-}
-
-button.remove-from-cart {
-    background-color: #FF5733;
-    margin-top: 5px;
-}
-
-button.remove-from-cart:hover {
-    background-color: #e64a19;
-}
-
-/* Footer styles */
-.footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-.footer .footer-contact,
-.footer .footer-hours {
-    margin-bottom: 10px;
-}
-
-.footer .social-links {
-    margin: 10px 0;
-}
-
-.footer .social-icon {
-    margin: 0 10px;
-    color: white;
-    font-size: 1.5em;
-}
-
-.footer-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
+  }
+  
+  .menu h3 {
+	font-family: 'KaiTi', serif; /* Calligraphy-style font for headers */
+	color: #B22222; /* Dark red */
+	text-transform: uppercase;
+	font-size: 1.5em;
+	margin-bottom: 10px;
+	text-align: center;
+  }
+  
+  .menu ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	text-align: center; /* Center-align the list items */
+  }
+  
+  .menu li {
+	padding: 15px;
+	border-bottom: 1px solid #D3D3D3;
+	margin-bottom: 10px;
+  }
+  
+  .menu li:last-child {
+	border-bottom: none;
+  }
+  
+  .menu p {
+	font-size: 1em;
+	color: #555;
+  }
+  
+  .quantity-controls {
+	display: flex;
+	align-items: center;
+	justify-content: center; /* Center the quantity controls */
+	margin-top: 10px;
+  }
+  
+  .quantity-controls button {
+	background-color: #B22222; /* Dark red */
+	color: white;
+	border: none;
+	border-radius: 4px;
+	padding: 5px 10px;
+	cursor: pointer;
+	font-size: 1.2em;
+  }
+  
+  .quantity-controls button:hover {
+	background-color: #8B0000; /* Darker red */
+  }
+  
+  .quantity-controls input {
+	width: 50px;
+	padding: 5px;
+	text-align: center;
+	border: 1px solid #B22222;
+	border-radius: 4px;
+	margin: 0 10px;
+  }
+  
+  .add-to-cart, .remove-from-cart {
+	display: inline-block;
+	background-color: #FFD700; /* Gold color */
+	color: #000;
+	padding: 10px 20px;
+	border-radius: 6px;
+	text-transform: uppercase;
+	cursor: pointer;
+	font-weight: bold;
+	margin-top: 10px;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
+  }
+  
+  .add-to-cart:hover, .remove-from-cart:hover {
+	background-color: #FFA500; /* Lighter gold */
+  }
+  
+  /* Sauces Section */
+  .sauces {
+	margin-top: 20px;
+	padding: 10px 0;
+	text-align: center;
+	border-top: 2px solid #B22222; /* Dark red border at the top */
+  }
+  
+  .sauces ul {
+	padding: 0;
+	list-style-type: none;
+	margin: 0;
+  }
+  
+  .sauces li {
+	color: #B22222; 
+	font-weight: bold;
+	font-size: 1.2em;
+	padding: 10px 0;
+	border-bottom: 1px solid #D3D3D3;
+  }
+  
+  .sauces li:last-child {
+	border-bottom: none;
+  }
+  
+  .sauces li:hover {
+	background-color: #f9f9f9;
+	cursor: pointer;
+  }
+  
+  /* Drinks Section */
+  .drinks {
+	margin-top: 20px;
+  }
+  
+  .drinks li {
+	padding: 15px;
+	border-bottom: 1px solid #D3D3D3;
+	margin-bottom: 10px;
+	font-size: 1.1em;
+  }
+  
+  .drinks li:last-child { /*lastchild väljer sista barnet*/
+	border-bottom: none;
+  }
+  
+  /* Cart Section */
+  .cart {
+	background-color: #F5F1F1; 
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	color: #333;
+	max-width: 800px;
+	margin: 50px auto; /* Center the cart with space at the top */
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* Horizontally center the content */
+	justify-content: center; /* Vertically center the content */
+  }
+  
+  .cart h3 {
+	color: #B22222; /* Dark red */
+	text-transform: uppercase;
+	font-size: 1.8em;
+	margin-bottom: 20px;
+	text-align: center;
+  }
+  
+  .cart-items {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	text-align: left; /* Left-align the items in the cart */
+  }
+  
+  .cart-items li {
+	padding: 10px;
+	border-bottom: 1px solid #D3D3D3;
+	margin-bottom: 10px;
+	font-size: 1.1em;
+  }
+  
+  .cart-items li:last-child {
+	border-bottom: none;
+  }
+  
+  .cart p {
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #B22222; /* Dark red color */
+	margin-top: 20px;
+	text-align: center;
+  }
+  
+  .checkout {
+	background-color: #FFD700; /* Gold color */
+	color: #000;
+	padding: 12px 24px;
+	border-radius: 6px;
+	text-transform: uppercase;
+	cursor: pointer;
+	font-weight: bold;
+	margin-top: 20px;
+	transition: background-color 0.3s ease;
+	border: none;
+  }
+  
+  .checkout:hover {
+	background-color: #FFA500; /* Lighter gold on hover */
+  }
+  
+  .cart-items li:hover {
+	background-color: #f9f9f9;
+	cursor: pointer;
+  }
+  
