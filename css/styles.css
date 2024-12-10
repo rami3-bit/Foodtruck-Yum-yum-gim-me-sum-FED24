@@ -35,12 +35,13 @@ body {
 	justify-content: center; 
 	max-width: 800px;
 	margin: 50px auto; 
+	display: none;
 
   }
   
   .menu h3 {
-	font-family: 'KaiTi', serif; /* Calligraphy-style font for headers */
-	color: #B22222; /* Dark red */
+	font-family: 'KaiTi', serif;
+	color: #B22222; 
 	text-transform: uppercase;
 	font-size: 1.5em;
 	margin-bottom: 10px;
@@ -51,7 +52,7 @@ body {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
-	text-align: center; /* Center-align the list items */
+	text-align: center;
   }
   
   .menu li {
@@ -72,12 +73,12 @@ body {
   .quantity-controls {
 	display: flex;
 	align-items: center;
-	justify-content: center; /* Center the quantity controls */
+	justify-content: center;
 	margin-top: 10px;
   }
   
   .quantity-controls button {
-	background-color: #B22222; /* Dark red */
+	background-color: #B22222;
 	color: white;
 	border: none;
 	border-radius: 4px;
@@ -87,7 +88,7 @@ body {
   }
   
   .quantity-controls button:hover {
-	background-color: #8B0000; /* Darker red */
+	background-color: #8B0000;
   }
   
   .quantity-controls input {
@@ -177,6 +178,7 @@ body {
 	flex-direction: column;
 	align-items: center; /* Horizontally center the content */
 	justify-content: center; /* Vertically center the content */
+	display: none;
   }
   
   .cart h3 {
@@ -236,3 +238,97 @@ body {
 	cursor: pointer;
   }
   
+  /*about section*/
+/* Grundläggande stil för sidan */
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF8E1; /* Ljusgul bakgrund */
+    color: #333;
+}
+
+/* Om oss Sektion */
+.about {
+    display: flex;
+    justify-content: center; /* Centrera horisontellt */
+    align-items: center; /* Centrera vertikalt */
+    flex-direction: column; /* Låt elementen staplas vertikalt på små skärmar */
+    padding: 50px 30px;
+    background-color: #F7F1E1; /* Ljusbeige bakgrund */
+    border-radius: 10px; /* Rundade hörn */
+    box-shadow: 0px 4px 10px black; 
+    margin: 50px auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+/* Textdelens styling */
+.about-text {
+    width: 80%;
+    padding-right: 20px;
+    color: #333;
+}
+
+.about-text h2 {
+    font-family: 'KaiTi', serif;
+    color: #B22222;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-text p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.about-text p strong {
+    color: #B22222;
+}
+
+/* Bildens styling */
+.about-image {
+    width: 70%;
+    margin-top: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* För att centrera knappen i sektionen */
+.order-section {
+    text-align: center; /* Centrera knappen horisontellt */
+    margin: 50px 0;
+}
+
+#order-button {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    background-color: #FFD700; /* Gold background color */
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow to make it stand out */
+    margin: 0 auto; /* Detta centrerar knappen i dess förälder */
+    display: block; /* Gör knappen till ett block-element för att tillåta centrering */
+}
+
+
+#order-button:hover {
+    background-color: #FFA500; /* Lighter gold when hovered */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+
