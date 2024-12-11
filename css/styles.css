@@ -21,54 +21,74 @@ body {
 	text-transform: uppercase;
   }
   
-  /* Menu Section */
-  .menu {
-	background-color: #F5F1F1; 
+  /* styles.css */
+.menu {
+	width: 100%;
+	max-width: 390px;
+	margin: 0 auto;
+	background-color: #40746E;
+	color: #fff;
 	padding: 20px;
 	border-radius: 8px;
-	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-	font-family: 'SimHei', sans-serif;
-	color: #333;
-	display: flex;
-	flex-direction: column;
-	align-items: center; 
-	justify-content: center; 
-	max-width: 800px;
-	margin: 50px auto; 
-	display: none;
-
   }
   
-  .menu h3 {
-	font-family: 'KaiTi', serif;
-	color: #B22222; 
-	text-transform: uppercase;
-	font-size: 1.5em;
-	margin-bottom: 10px;
+  .menu-title {
 	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 20px;
   }
   
-  .menu ul {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	text-align: center;
-  }
-  
-  .menu li {
+  .menu-category {
+	background-color: #2A5A54;
 	padding: 15px;
-	border-bottom: 1px solid #D3D3D3;
 	margin-bottom: 10px;
+	border-radius: 8px;
   }
   
-  .menu li:last-child {
-	border-bottom: none;
+  .menu-category h2 {
+	margin: 0 0 5px;
+	font-size: 18px;
   }
   
-  .menu p {
-	font-size: 1em;
-	color: #555;
+  .menu-category p {
+	margin: 5px 0;
   }
+  
+  .price {
+	font-weight: bold;
+	text-align: right;
+	margin-top: 10px;
+  }
+  
+  .section-title {
+	font-size: 20px;
+	font-weight: bold;
+	margin: 20px 0 10px;
+  }
+  
+  .sauces, .drinks {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+  }
+  
+  .sauce-button, .drink-button {
+	flex: 1 1 48%;
+	background-color: #2A5A54;
+	color: #fff;
+	padding: 10px;
+	border: none;
+	border-radius: 8px;
+	text-align: center;
+	font-size: 14px;
+	cursor: pointer;
+  }
+  
+  .sauce-button:hover, .drink-button:hover {
+	background-color: #335D57;
+  }
+  
   
   .quantity-controls {
 	display: flex;
@@ -100,30 +120,14 @@ body {
 	margin: 0 10px;
   }
   
-  .add-to-cart, .remove-from-cart {
-	display: inline-block;
-	background-color: #FFD700; /* Gold color */
-	color: #000;
-	padding: 10px 20px;
-	border-radius: 6px;
-	text-transform: uppercase;
-	cursor: pointer;
-	font-weight: bold;
-	margin-top: 10px;
-	text-decoration: none;
-	transition: background-color 0.3s ease;
-  }
-  
-  .add-to-cart:hover, .remove-from-cart:hover {
-	background-color: #FFA500; /* Lighter gold */
-  }
+ 
   
   /* Sauces Section */
   .sauces {
 	margin-top: 20px;
 	padding: 10px 0;
 	text-align: center;
-	border-top: 2px solid #B22222; /* Dark red border at the top */
+
   }
   
   .sauces ul {
@@ -165,98 +169,60 @@ body {
 	border-bottom: none;
   }
   
-  /* Cart Section */
-  .cart {
-	background-color: #F5F1F1; 
-	padding: 20px;
-	border-radius: 8px;
-	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-	color: #333;
-	max-width: 800px;
-	margin: 50px auto; /* Center the cart with space at the top */
+/*cart section*/
+.cart-container {
 	display: flex;
-	flex-direction: column;
-	align-items: center; /* Horizontally center the content */
-	justify-content: center; /* Vertically center the content */
-	display: none;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #40746E;
+	padding: 10px 20px;
+	color: #fff;
+	font-size: 24px;
+	font-weight: bold;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
   }
   
-  .cart h3 {
-	color: #B22222; /* Dark red */
-	text-transform: uppercase;
-	font-size: 1.8em;
-	margin-bottom: 20px;
-	text-align: center;
+  /* Varukorgsikonens styling */
+  .cart-icon {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
   }
   
-  .cart-items {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
+  .cart-icon img {
 	width: 100%;
-	text-align: left; /* Left-align the items in the cart */
+	height: auto;
   }
   
-  .cart-items li {
-	padding: 10px;
-	border-bottom: 1px solid #D3D3D3;
-	margin-bottom: 10px;
-	font-size: 1.1em;
-  }
-  
-  .cart-items li:last-child {
-	border-bottom: none;
-  }
-  
-  .cart p {
-	font-size: 1.3em;
+  .cart-count {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: #FF4C4C;
+	color: white;
+	font-size: 12px;
 	font-weight: bold;
-	color: #B22222; /* Dark red color */
-	margin-top: 20px;
-	text-align: center;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   }
   
-  .checkout {
-	background-color: #FFD700; /* Gold color */
-	color: #000;
-	padding: 12px 24px;
-	border-radius: 6px;
-	text-transform: uppercase;
-	cursor: pointer;
-	font-weight: bold;
-	margin-top: 20px;
-	transition: background-color 0.3s ease;
-	border: none;
-  }
-  
-  .checkout:hover {
-	background-color: #FFA500; /* Lighter gold on hover */
-  }
-  
-  .cart-items li:hover {
-	background-color: #f9f9f9;
-	cursor: pointer;
-  }
   
   /*about section*/
-/* Grundläggande stil för sidan */
-body {
-    font-family: "Roboto", sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #FFF8E1; /* Ljusgul bakgrund */
-    color: #333;
-}
-
-/* Om oss Sektion */
 .about {
     display: flex;
-    justify-content: center; /* Centrera horisontellt */
-    align-items: center; /* Centrera vertikalt */
-    flex-direction: column; /* Låt elementen staplas vertikalt på små skärmar */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding: 50px 30px;
     background-color: #F7F1E1; /* Ljusbeige bakgrund */
-    border-radius: 10px; /* Rundade hörn */
+    border-radius: 10px;
     box-shadow: 0px 4px 10px black; 
     margin: 50px auto;
     max-width: 1200px;
@@ -305,7 +271,7 @@ body {
 
 /* För att centrera knappen i sektionen */
 .order-section {
-    text-align: center; /* Centrera knappen horisontellt */
+    text-align: center;
     margin: 50px 0;
 }
 
@@ -320,9 +286,8 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow to make it stand out */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
     margin: 0 auto; /* Detta centrerar knappen i dess förälder */
-    display: block; /* Gör knappen till ett block-element för att tillåta centrering */
 }
 
 

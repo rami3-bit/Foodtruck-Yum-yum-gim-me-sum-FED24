@@ -7,20 +7,20 @@
     <title>Foodtruck - Yum yum gim me sum</title>
 
     <!-- Externa CSS-filer -->
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-	<link rel="stylesheet" href="/css/footer.css">
-	<link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+	<link rel="stylesheet" href="../css/footer.css">
+	<link rel="stylesheet" href="../css/header.css">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- JavaScript-filer -->
-    <script type="module" src="/javascript/checkout.js"></script>
-	<script type="module" src="/javascript/menu.js"></script>
-	<script type="module" src="/javascript/script.js"></script>
-	<script type="module" src="/javascript/.js"></script>
+    <script type="module" src="../javascript/checkout.js"></script>
+	<script type="module" src="../javascript/menu.js"></script>
+	<script type="module" src="../javascript/script.js"></script>
+	<!-- <script type="module" src="../javascript/.js"></script> -->
 
 
 
@@ -55,7 +55,7 @@
 
         <div class="about-image">
             <!-- Här kan du ladda upp en bild på foodtrucken -->
-            <img src="images/truck.jpg" alt="Yum Yum Gim Me Sum Foodtruck">
+            <img src="images/truck.jpg" alt="Yum Yum Gim Me Sum Foodtruck"/> 
         </div>
     </section>
 
@@ -64,126 +64,72 @@
         <button id="order-button">Beställ Nu</button>
     </section>
 	
-	<section>
-		<div class="menu">
-
-									  <!-- wonton Meny -->
-		  
-		<div class="wonton">
-		  <ul>
-			<li>
-			  <h3>Wonton 1</h3>
-			  <p>En läcker kinesisk dumpling fylld med smak.</p>
-			  <p><strong>Pris: 45 SEK</strong></p>
-			  <div class="quantity-controls">
-				<button class="minus" data-product="Wonton 1">-</button>
-				<input type="number" id="quantity-wonton1" name="quantity-wonton1" value="0" min="0">
-				<button class="plus" data-product="Wonton 1">+</button>
-			  </div>
-			  <button class="add-to-cart" data-product="Wonton 1" data-price="45">Lägg till i varukorgen</button>
-			  <button class="remove-from-cart" data-product="Wonton 1" data-price="45">Ta bort från varukorgen</button>
-			</li>
-			<li>
-			  <h3>Wonton 2</h3>
-			  <p>En annan variant med läcker fyllning.</p>
-			  <p><strong>Pris: 50 SEK</strong></p>
-			  <div class="quantity-controls">
-				<button class="minus" data-product="Wonton 2">-</button>
-				<input type="number" id="quantity-wonton2" name="quantity-wonton2" value="0" min="0">
-				<button class="plus" data-product="Wonton 2">+</button>
-			  </div>
-			  <button class="add-to-cart" data-product="Wonton 2" data-price="50">Lägg till i varukorgen</button>
-			  <button class="remove-from-cart" data-product="Wonton 2" data-price="50">Ta bort från varukorgen</button>
-			</li>
-			<li>
-			  <h3>Wonton 3</h3>
-			  <p>Vegetarisk dumpling för den som gillar grönt.</p>
-			  <p><strong>Pris: 40 SEK</strong></p>
-			  <div class="quantity-controls">
-				<button class="minus" data-product="Wonton 3">-</button>
-				<input type="number" id="quantity-wonton3" name="quantity-wonton3" value="0" min="0">
-				<button class="plus" data-product="Wonton 3">+</button>
-			  </div>
-			  <button class="add-to-cart" data-product="Wonton 3" data-price="40">Lägg till i varukorgen</button>
-			  <button class="remove-from-cart" data-product="Wonton 3" data-price="40">Ta bort från varukorgen</button>
-			</li>
-		</div>
+	<section class="menu">
+		<h1 class="menu-title">MENY</h1>
 	  
-				<!-- Såser till Wonton -->
-
-			<div class="sauces">
-					<ul>
-						<li>Soya-sås</li>
-						<li>Sesamsås</li>
-						<li>Chilisås</li>
-						<li>Vietnamesisk hoisinsås</li>
-						<li>Syrad vinäger (risvinäger)</li>
-						<li>Plommonsås</li>
-						<li>Sweet and sour-sås</li>
-					</ul>
-				</li>
+		<!-- Wonton Meny -->
+		<div class="cart-container">
+			<span class="menu-title">MENY</span>
+			<div class="cart-icon">
+			  <i class="fa-solid fa-cart-shopping"></i>
+			  <span class="cart-count">0</span>
 			</div>
+		  </div>
+		  
+		  
 
-
-			<!-- Drinks -->
-
-		<div class="drinks">
-			<li>
-			  <h3>Cola</h3>
-			  <p>Klassisk cola, den perfekta drycken till maten.</p>
-			  <p><strong>Pris: 25 SEK</strong></p>
-			  <div class="quantity-controls">
-				<button class="minus" data-product="Cola">-</button>
-				<input type="number" id="quantity-cola" name="quantity-cola" value="0" min="0">
-				<button class="plus" data-product="Cola">+</button>
-			  </div>
-
-			  <button class="add-to-cart" data-product="Cola" data-price="25">Lägg till i varukorgen</button>
-			  <button class="remove-from-cart" data-product="Cola" data-price="25">Ta bort från varukorgen</button>
-			</li>
-			<li>
-			  <h3>Sprite</h3>
-			  <p>Frisk citron-lime smak för de varma dagarna.</p>
-			  <p><strong>Pris: 25 SEK</strong></p>
-			  <div class="quantity-controls">
-				<button class="minus" data-product="Sprite">-</button>
-				<input type="number" id="quantity-sprite" name="quantity-sprite" value="0" min="0">
-				<button class="plus" data-product="Sprite">+</button>
-			  </div>
-			  <button class="add-to-cart" data-product="Sprite" data-price="25">Lägg till i varukorgen</button>
-			  <button class="remove-from-cart" data-product="Sprite" data-price="25">Ta bort från varukorgen</button>
-			</li>
-			<li>
-			  <h3>Vatten</h3>
-			  <p>Rent vatten för en fräsch paus.</p>
-			  <p><strong>Pris: 15 SEK</strong></p>
-			  <div class="quantity-controls">
-				<button class="minus" data-product="Vatten">-</button>
-				<input type="number" id="quantity-vatten" name="quantity-vatten" value="0" min="0">
-				<button class="plus" data-product="Vatten">+</button>
-			  </div>
-			  <button class="add-to-cart" data-product="Vatten" data-price="15">Lägg till i varukorgen</button>
-			  <button class="remove-from-cart" data-product="Vatten" data-price="15">Ta bort från varukorgen</button>
-			</li>
-		  </ul>
+		<div class="menu-category">
+		  <h2>Karlstad</h2>
+		  <p>Kantarell, scharlottenlök, morot, bladpersilja</p>
+		  <p class="price">9 SEK</p>
 		</div>
+	  
+		<div class="menu-category">
+		  <h2>Bangkok</h2>
+		  <p>Morot, salladslök, chili, kokos, lime, koriander</p>
+		  <p class="price">9 SEK</p>
+		</div>
+	  
+		<div class="menu-category">
+		  <h2>Ho Chi Minh</h2>
+		  <p>Kål, salladslök, chili, vitlök, ingefära, tofu</p>
+		  <p class="price">9 SEK</p>
+		</div>
+	  
+		<div class="menu-category">
+		  <h2>Paris</h2>
+		  <p>Kål, chèvre, honung, basilika, valnötspasta</p>
+		  <p class="price">9 SEK</p>
+		</div>
+	  
+		<div class="menu-category">
+		  <h2>Oaxaca</h2>
+		  <p>Majs, tomat, rostade ärtor, vitlök, lime</p>
+		  <p class="price">9 SEK</p>
+		</div>
+	  
+		<!-- Dip Såser -->
+		<h2 class="section-title">DIPSÅS</h2>
+			<div class="sauces">
+				<button class="sauce-button">Sweet chili</button>
+				<button class="sauce-button">Wonton std</button>
+				<button class="sauce-button">Sweet & sour</button>
+				<button class="sauce-button">Hot mango</button>
+				<button class="sauce-button">Chili mayo</button>
+				<button class="sauce-button">Guacamole</button>
+			</div>
+		
+		<!-- Drycker -->
+		<h2 class="section-title">DRICKA</h2>
+			<div class="drinks">
+				<button class="drink-button">Fanta Orange</button>
+				<button class="drink-button">Fanta Exotic</button>
+				<button class="drink-button">Coca Cola</button>
+				<button class="drink-button">Sprite</button>
+				<button class="drink-button">LOKA Granatäpple</button>
+				<button class="drink-button">LOKA Citrus</button>
+			</div>
 	  </section>
-	  
-	  
-	  
-	
-
-    <!-- Varukorg -->
-    <section class="cart">
-        <h3>Din varukorg</h3>
-        <ul class="cart-items">
-            <!-- Produkterna kommer att listas här -->
-        </ul>
-        <p><strong>Total: <span class="total-price">0 SEK</span></strong></p>
-        <button class="checkout" onclick="checkout()">Gå till kassan</button>
-    </section>
-
-    <!-- Footer -->
 
 	  
 	<footer class="footer">
@@ -217,10 +163,6 @@
 	
 	
 	  
-	  
-	  
-	  
-
 </body>
 
 </html>
