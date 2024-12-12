@@ -6,22 +6,7 @@ body {
 	padding: 0;
 	background-color: #FFF8E1; 
 	color: #333;
-  }
-  
-  /* Header */
-  header {
-	background-color: #B22222;
-	color: white;
-	padding: 15px;
-	text-align: center;
-	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  header h1 {
-	margin: 0;
-	font-size: 2em;
-	text-transform: uppercase;
-  }
+
   
   /* menu */
 .menu {
@@ -29,7 +14,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: none;
     background-color: #6ab49b; /* Bakgrundsfärg enligt bilden */
     color: white;
     padding: 20px;
@@ -56,6 +40,13 @@ body {
 	margin-bottom: 10px;
 	border-radius: 8px;
   }
+
+  .menu-category.selected {
+    background-color: #1d3d37; /* Darker shade */
+    color: #fff; /* Adjust text color for better contrast */
+    transition: background-color 0.3s ease;
+}
+
   
   .menu-category h2 {
 	margin: 0 0 5px;
@@ -225,62 +216,6 @@ body {
   }
   
   
-  /*about section*/
-.about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 50px 30px;
-    background-color: #F7F1E1;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px black; 
-    margin: 50px auto;
-    max-width: 1200px;
-    text-align: center;
-	position: relative; 
-    z-index: 1;
-}
-
-/* Textdelens styling */
-.about-text {
-    width: 80%;
-    padding-right: 20px;
-    color: #333;
-}
-
-.about-text h2 {
-    font-family: 'KaiTi', serif;
-    color: #B22222;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.about-text p {
-    font-size: 1.2em;
-    line-height: 1.8;
-    color: #555;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.about-text p strong {
-    color: #B22222;
-}
-
-/* Bildens styling */
-.about-image {
-    width: 70%;
-    margin-top: 20px;
-}
-
-.about-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
 
 /* För att centrera knappen i sektionen */
 .order-section {
