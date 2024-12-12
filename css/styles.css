@@ -6,7 +6,7 @@ body {
 	padding: 0;
 	background-color: #FFF8E1; 
 	color: #333;
-
+}
   
   /* menu */
 .menu {
@@ -25,13 +25,6 @@ body {
     width: 400px;
     overflow-y: auto; /*Scroll om innehållet är långt */
     font-family: 'Roboto', sans-serif;
-  }
-  
-  .menu-title {
-	text-align: center;
-	font-size: 24px;
-	font-weight: bold;
-	margin-bottom: 20px;
   }
   
   .menu-category {
@@ -176,7 +169,6 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: #40746E;
 	padding: 10px 20px;
 	color: #fff;
 	font-size: 24px;
@@ -186,6 +178,21 @@ body {
   }
   
   /* Varukorgsikonens styling */
+ /* Visa varukorgen med rätt stil */
+.cart-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart-item .details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-item .price {
+    font-weight: bold;
+} 
+ 
   .cart-icon {
 	position: relative;
 	width: 40px;
