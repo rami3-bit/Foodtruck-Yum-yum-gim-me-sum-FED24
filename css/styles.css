@@ -1,3 +1,5 @@
+@import "root.css";
+
 body {
 	font-family: "Roboto", sans-serif;
 	margin: 0;
@@ -6,7 +8,7 @@ body {
 	color: #333;
   }
   
-  /* Header - General Header Styling */
+  /* Header */
   header {
 	background-color: #B22222;
 	color: white;
@@ -21,15 +23,24 @@ body {
 	text-transform: uppercase;
   }
   
-  /* styles.css */
+  /* menu */
 .menu {
-	width: 100%;
-	max-width: 390px;
-	margin: 0 auto;
-	background-color: #40746E;
-	color: #fff;
-	padding: 20px;
-	border-radius: 8px;
+	position: fixed; /*utan position fixed hade menu bara rört sig till närmaste förälder*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background-color: #6ab49b; /* Bakgrundsfärg enligt bilden */
+    color: white;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 95%; 
+    max-height: 90%;
+    width: 400px;
+    overflow-y: auto; /*Scroll om innehållet är långt */
+    font-family: 'Roboto', sans-serif;
   }
   
   .menu-title {
@@ -60,7 +71,7 @@ body {
 	text-align: right;
 	margin-top: 10px;
   }
-  
+  /*Sauces*/
   .section-title {
 	font-size: 20px;
 	font-weight: bold;
@@ -221,12 +232,14 @@ body {
     align-items: center;
     flex-direction: column;
     padding: 50px 30px;
-    background-color: #F7F1E1; /* Ljusbeige bakgrund */
+    background-color: #F7F1E1;
     border-radius: 10px;
     box-shadow: 0px 4px 10px black; 
     margin: 50px auto;
     max-width: 1200px;
     text-align: center;
+	position: relative; 
+    z-index: 1;
 }
 
 /* Textdelens styling */
@@ -278,7 +291,7 @@ body {
 #order-button {
     padding: 15px 30px;
     font-size: 1.5em;
-    background-color: #FFD700; /* Gold background color */
+    background-color: #FFD700; /* Gold */
     color: black;
     border: none;
     border-radius: 8px;
@@ -292,8 +305,8 @@ body {
 
 
 #order-button:hover {
-    background-color: #FFA500; /* Lighter gold when hovered */
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    background-color: #FFA500;
+    transform: scale(1.05);
 }
 
 

@@ -11,15 +11,19 @@
     <link rel="stylesheet" href="../css/responsive.css">
 	<link rel="stylesheet" href="../css/footer.css">
 	<link rel="stylesheet" href="../css/header.css">
+	<link rel="stylesheet" href="../css/order-summary.css">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- JavaScript-filer -->
-    <script type="module" src="../javascript/checkout.js"></script>
-	<script type="module" src="../javascript/menu.js"></script>
-	<script type="module" src="../javascript/script.js"></script>
+	<script type="module" src="../js/checkout.js" defer></script>
+	<script type="module" src="../js/menu.js" defer></script>
+	<script type="module" src="../js/script.js" defer></script>
+	
+	
+	
 	<!-- <script type="module" src="../javascript/.js"></script> -->
 
 
@@ -54,7 +58,6 @@
         </div>
 
         <div class="about-image">
-            <!-- Här kan du ladda upp en bild på foodtrucken -->
             <img src="images/truck.jpg" alt="Yum Yum Gim Me Sum Foodtruck"/> 
         </div>
     </section>
@@ -64,10 +67,13 @@
         <button id="order-button">Beställ Nu</button>
     </section>
 	
+
+
+							<!-- Meny and the cart is included in this section -->
 	<section class="menu">
 		<h1 class="menu-title">MENY</h1>
-	  
-		<!-- Wonton Meny -->
+
+	<!-- cart -->
 		<div class="cart-container">
 			<span class="menu-title">MENY</span>
 			<div class="cart-icon">
@@ -130,6 +136,27 @@
 				<button class="drink-button">LOKA Citrus</button>
 			</div>
 	  </section>
+
+	  <section class="cart-item">
+		<div class="details">
+			<span class="item-name">KARLSTAD</span>
+			<span class="quantity">3 stycken</span>
+		</div>
+		<div class="price">27 SEK</div>
+	</section>
+
+<!-- Order Summary Section -->
+<section id="order-summary" class="order-section">
+	<h2>Din Beställning</h2>
+	<ul id="order-list"></ul>
+	<div class="order-total">
+	  <span>Total:</span>
+	  <span id="order-total-price">0 SEK</span>
+	</div>
+	<button id="confirm-order">Bekräfta Beställning</button>
+  </section>
+  
+	
 
 	  
 	<footer class="footer">
