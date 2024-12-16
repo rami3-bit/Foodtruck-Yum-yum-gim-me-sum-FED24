@@ -28,19 +28,18 @@ body {
   }
   
   .menu-category {
-	background-color: #2A5A54;
+	background-color: rgb(110, 110, 110);
 	padding: 15px;
 	margin-bottom: 10px;
 	border-radius: 8px;
   }
 
   .menu-category.selected {
-    background-color: #1d3d37; /* Darker shade */
+    background-color: rgb(73, 73, 73); /* Darker shade */
     color: #fff; /* Adjust text color for better contrast */
     transition: background-color 0.3s ease;
 }
 
-  
   .menu-category h2 {
 	margin: 0 0 5px;
 	font-size: 18px;
@@ -84,7 +83,12 @@ body {
 	background-color: #335D57;
   }
   
-  
+  .sauce-button.selected {
+    background-color: #1d3d37; /* Darker shade */
+    color: #fff; /* Adjust text color for better contrast */
+    transition: background-color 0.3s ease;
+
+  }
   .quantity-controls {
 	display: flex;
 	align-items: center;
@@ -229,11 +233,13 @@ select.product-quantity {
 	width: 40px;
 	height: 40px;
 	cursor: pointer;
+	
   }
   
   .cart-icon img {
 	width: 100%;
 	height: auto;
+	background-color: rgb(146, 129, 129);
   }
   
   .cart-count {
