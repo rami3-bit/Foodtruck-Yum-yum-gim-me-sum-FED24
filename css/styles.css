@@ -84,8 +84,8 @@ body {
 
   
   .sauce-button.selected {
-    background-color: #1d3d37; /* Darker shade */
-    color: #fff; /* Adjust text color for better contrast */
+	background-color: rgb(73, 73, 73);
+    color: #fff;
     transition: background-color 0.3s ease;
 
   }
@@ -119,38 +119,33 @@ body {
 	margin: 0 10px;
   }
   
-  /* Styling för select-menyn */
-/* Styling för select-menyn */
+
 select.product-quantity {
-	background-color: #f0f0f0; /* Ljus bakgrund */
-	border: 1px solid #ccc; /* Kantfärg */
+	background-color: #f0f0f0; 
+	border: 1px solid #ccc;
 	padding: 8px;
 	font-size: 16px;
-	color: #333; /* Textfärg */
+	color: #333; 
 	border-radius: 5px;
 	cursor: pointer;
   }
   
   /* Styling när en användare markerar ett alternativ i select */
+
   select.product-quantity:focus {
-	background-color: #e1f5fe; /* Ljusblå bakgrund vid fokus */
-	border-color: #1e88e5; /* Kantfärg vid fokus */
-	color: #0277bd; /* Textfärg vid fokus */
+	background-color: #e1f5fe;
+	color: #0277bd;
   }
   
-  /* Styling för alternativ (option) */
+ 
   select.product-quantity option {
-	background-color: #ffffff; /* Vit bakgrund för varje alternativ */
-	color: #333; /* Textfärg */
+	background-color: #ffffff;
   }
   
   select.product-quantity option:checked {
-	background-color: #ffeb3b; /* Gult bakgrund när alternativet är markerat */
-	color: #000; /* Textfärg när alternativet är markerat */
+	background-color: #ffeb3b;
   }
   
-  
- 
   
   /* Sauces Section */
   .sauces {
@@ -275,26 +270,3 @@ select.product-quantity {
     text-align: center;
     margin: 50px 0;
 }
-
-#order-button {
-    padding: 15px 30px;
-    font-size: 1.5em;
-    background-color: #FFD700; /* Gold */
-    color: black;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
-    margin: 0 auto; /* Detta centrerar knappen i dess förälder */
-}
-
-
-#order-button:hover {
-    background-color: #FFA500;
-    transform: scale(1.05);
-}
-
-

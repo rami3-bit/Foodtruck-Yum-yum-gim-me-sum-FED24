@@ -1,4 +1,3 @@
-// Hämta alla relevanta element
 const menuItems = document.querySelectorAll(".menu-category");
 const sauceButtons = document.querySelectorAll(".sauce-button");
 const drinkButtons = document.querySelectorAll(".drink-button");
