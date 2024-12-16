@@ -40,8 +40,7 @@
     margin-top: 20px;
 }
 
-.receipt-button,
-.new-order-button {
+.receipt-button, .new-order-button {
     display: block;
     width: 100%;
     margin-bottom: 10px;
