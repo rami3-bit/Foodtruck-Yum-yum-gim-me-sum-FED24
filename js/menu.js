@@ -1,9 +1,18 @@
+// Hämta alla relevanta element
 const menuItems = document.querySelectorAll(".menu-category");
+const sauceButtons = document.querySelectorAll(".sauce-button");
+const drinkButtons = document.querySelectorAll(".drink-button");
 
-// Lägg till klickhändelse för varje meny-kategori
-menuItems.forEach((item) => {
-    item.addEventListener("click", () => {
-        // Växla "selected"-klassen
-        item.classList.toggle("selected");
+// Funktion som växlar "selected"-klassen
+function toggleSelection(elements) {
+    elements.forEach((item) => {
+        item.addEventListener("click", () => {
+            item.classList.toggle("selected");
+        });
     });
-});
+}
+
+// Använd funktionen för alla tre typer
+toggleSelection(menuItems);
+toggleSelection(sauceButtons);
+toggleSelection(drinkButtons);

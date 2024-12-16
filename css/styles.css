@@ -25,6 +25,7 @@ body {
     width: 400px;
     overflow-y: auto; /*Scroll om innehållet är långt */
     font-family: 'Roboto', sans-serif;
+	display: ;
   }
   
   .menu-category {
@@ -32,11 +33,12 @@ body {
 	padding: 15px;
 	margin-bottom: 10px;
 	border-radius: 8px;
+	cursor: pointer;
   }
 
   .menu-category.selected {
-    background-color: rgb(73, 73, 73); /* Darker shade */
-    color: #fff; /* Adjust text color for better contrast */
+    background-color: rgb(73, 73, 73);
+    color: #fff;
     transition: background-color 0.3s ease;
 }
 
@@ -69,7 +71,7 @@ body {
   
   .sauce-button, .drink-button {
 	flex: 1 1 48%;
-	background-color: #2A5A54;
+	background-color: rgb(110, 110, 110);
 	color: #fff;
 	padding: 10px;
 	border: none;
@@ -79,9 +81,7 @@ body {
 	cursor: pointer;
   }
   
-  .sauce-button:hover, .drink-button:hover {
-	background-color: #335D57;
-  }
+
   
   .sauce-button.selected {
     background-color: #1d3d37; /* Darker shade */
@@ -157,7 +157,10 @@ select.product-quantity {
 	margin-top: 20px;
 	padding: 10px 0;
 	text-align: center;
+  }
 
+  .sauce-button {
+	background-color: rgb(110, 110, 110);
   }
   
   .sauces ul {
@@ -187,6 +190,12 @@ select.product-quantity {
   .drinks {
 	margin-top: 20px;
   }
+
+  .drink-button.selected {
+	background-color: rgb(73, 73, 73);
+	color: #fff;
+	transition: background-color 0.3s ease;
+	}
   
   .drinks li {
 	padding: 15px;
