@@ -1,75 +1,94 @@
+@import "root.css";
+
 body {
 	font-family: "Roboto", sans-serif;
 	margin: 0;
 	padding: 0;
 	background-color: #FFF8E1; 
 	color: #333;
+}
+  
+  /* menu */
+.menu {
+	position: fixed; /*utan position fixed hade menu bara rört sig till närmaste förälder*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #6ab49b; /* Bakgrundsfärg enligt bilden */
+    color: white;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 95%; 
+    max-height: 90%;
+    width: 400px;
+    overflow-y: auto; /*Scroll om innehållet är långt */
+    font-family: 'Roboto', sans-serif;
+	display: ;
   }
   
-  /* Header - General Header Styling */
-  header {
-	background-color: #B22222;
-	color: white;
+  .menu-category {
+	background-color: rgb(110, 110, 110);
 	padding: 15px;
-	text-align: center;
-	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  header h1 {
-	margin: 0;
-	font-size: 2em;
-	text-transform: uppercase;
-  }
-  
-  /* Menu Section */
-  .menu {
-	background-color: #F5F1F1; 
-	padding: 20px;
+	margin-bottom: 10px;
 	border-radius: 8px;
-	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-	font-family: 'SimHei', sans-serif;
-	color: #333;
+	cursor: pointer;
+  }
+
+  .menu-category.selected {
+    background-color: rgb(73, 73, 73);
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+  .menu-category h2 {
+	margin: 0 0 5px;
+	font-size: 18px;
+  }
+  
+  .menu-category p {
+	margin: 5px 0;
+  }
+  
+  .price {
+	font-weight: bold;
+	text-align: right;
+	margin-top: 10px;
+  }
+  /*Sauces*/
+  .section-title {
+	font-size: 20px;
+	font-weight: bold;
+	margin: 20px 0 10px;
+  }
+  
+  .sauces, .drinks {
 	display: flex;
-	flex-direction: column;
-	align-items: center; 
-	justify-content: center; 
-	max-width: 800px;
-	margin: 50px auto; 
-	display: none;
+	flex-wrap: wrap;
+	gap: 10px;
+  }
+  
+  .sauce-button, .drink-button {
+	flex: 1 1 48%;
+	background-color: rgb(110, 110, 110);
+	color: #fff;
+	padding: 10px;
+	border: none;
+	border-radius: 8px;
+	text-align: center;
+	font-size: 14px;
+	cursor: pointer;
+  }
+  
+
+  
+  .sauce-button.selected {
+	background-color: rgb(73, 73, 73);
+    color: #fff;
+    transition: background-color 0.3s ease;
 
   }
-  
-  .menu h3 {
-	font-family: 'KaiTi', serif;
-	color: #B22222; 
-	text-transform: uppercase;
-	font-size: 1.5em;
-	margin-bottom: 10px;
-	text-align: center;
-  }
-  
-  .menu ul {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	text-align: center;
-  }
-  
-  .menu li {
-	padding: 15px;
-	border-bottom: 1px solid #D3D3D3;
-	margin-bottom: 10px;
-  }
-  
-  .menu li:last-child {
-	border-bottom: none;
-  }
-  
-  .menu p {
-	font-size: 1em;
-	color: #555;
-  }
-  
   .quantity-controls {
 	display: flex;
 	align-items: center;
@@ -100,30 +119,43 @@ body {
 	margin: 0 10px;
   }
   
-  .add-to-cart, .remove-from-cart {
-	display: inline-block;
-	background-color: #FFD700; /* Gold color */
-	color: #000;
-	padding: 10px 20px;
-	border-radius: 6px;
-	text-transform: uppercase;
+
+select.product-quantity {
+	background-color: #f0f0f0; 
+	border: 1px solid #ccc;
+	padding: 8px;
+	font-size: 16px;
+	color: #333; 
+	border-radius: 5px;
 	cursor: pointer;
-	font-weight: bold;
-	margin-top: 10px;
-	text-decoration: none;
-	transition: background-color 0.3s ease;
   }
   
-  .add-to-cart:hover, .remove-from-cart:hover {
-	background-color: #FFA500; /* Lighter gold */
+  /* Styling när en användare markerar ett alternativ i select */
+
+  select.product-quantity:focus {
+	background-color: #e1f5fe;
+	color: #0277bd;
   }
+  
+ 
+  select.product-quantity option {
+	background-color: #ffffff;
+  }
+  
+  select.product-quantity option:checked {
+	background-color: #ffeb3b;
+  }
+  
   
   /* Sauces Section */
   .sauces {
 	margin-top: 20px;
 	padding: 10px 0;
 	text-align: center;
-	border-top: 2px solid #B22222; /* Dark red border at the top */
+  }
+
+  .sauce-button {
+	background-color: rgb(110, 110, 110);
   }
   
   .sauces ul {
@@ -153,6 +185,12 @@ body {
   .drinks {
 	margin-top: 20px;
   }
+
+  .drink-button.selected {
+	background-color: rgb(73, 73, 73);
+	color: #fff;
+	transition: background-color 0.3s ease;
+	}
   
   .drinks li {
 	padding: 15px;
@@ -165,170 +203,70 @@ body {
 	border-bottom: none;
   }
   
-  /* Cart Section */
-  .cart {
-	background-color: #F5F1F1; 
-	padding: 20px;
-	border-radius: 8px;
-	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-	color: #333;
-	max-width: 800px;
-	margin: 50px auto; /* Center the cart with space at the top */
+/*cart section*/
+.cart-container {
 	display: flex;
-	flex-direction: column;
-	align-items: center; /* Horizontally center the content */
-	justify-content: center; /* Vertically center the content */
-	display: none;
-  }
-  
-  .cart h3 {
-	color: #B22222; /* Dark red */
-	text-transform: uppercase;
-	font-size: 1.8em;
-	margin-bottom: 20px;
-	text-align: center;
-  }
-  
-  .cart-items {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	width: 100%;
-	text-align: left; /* Left-align the items in the cart */
-  }
-  
-  .cart-items li {
-	padding: 10px;
-	border-bottom: 1px solid #D3D3D3;
-	margin-bottom: 10px;
-	font-size: 1.1em;
-  }
-  
-  .cart-items li:last-child {
-	border-bottom: none;
-  }
-  
-  .cart p {
-	font-size: 1.3em;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	color: #fff;
+	font-size: 24px;
 	font-weight: bold;
-	color: #B22222; /* Dark red color */
-	margin-top: 20px;
-	text-align: center;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
   }
   
-  .checkout {
-	background-color: #FFD700; /* Gold color */
-	color: #000;
-	padding: 12px 24px;
-	border-radius: 6px;
-	text-transform: uppercase;
-	cursor: pointer;
-	font-weight: bold;
-	margin-top: 20px;
-	transition: background-color 0.3s ease;
-	border: none;
-  }
-  
-  .checkout:hover {
-	background-color: #FFA500; /* Lighter gold on hover */
-  }
-  
-  .cart-items li:hover {
-	background-color: #f9f9f9;
-	cursor: pointer;
-  }
-  
-  /*about section*/
-/* Grundläggande stil för sidan */
-body {
-    font-family: "Roboto", sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #FFF8E1; /* Ljusgul bakgrund */
-    color: #333;
+  /* Varukorgsikonens styling */
+ /* Visa varukorgen med rätt stil */
+.cart-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
 }
 
-/* Om oss Sektion */
-.about {
+.cart-item .details {
     display: flex;
-    justify-content: center; /* Centrera horisontellt */
-    align-items: center; /* Centrera vertikalt */
-    flex-direction: column; /* Låt elementen staplas vertikalt på små skärmar */
-    padding: 50px 30px;
-    background-color: #F7F1E1; /* Ljusbeige bakgrund */
-    border-radius: 10px; /* Rundade hörn */
-    box-shadow: 0px 4px 10px black; 
-    margin: 50px auto;
-    max-width: 1200px;
-    text-align: center;
+    justify-content: space-between;
 }
 
-/* Textdelens styling */
-.about-text {
-    width: 80%;
-    padding-right: 20px;
-    color: #333;
-}
-
-.about-text h2 {
-    font-family: 'KaiTi', serif;
-    color: #B22222;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.about-text p {
-    font-size: 1.2em;
-    line-height: 1.8;
-    color: #555;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.about-text p strong {
-    color: #B22222;
-}
-
-/* Bildens styling */
-.about-image {
-    width: 70%;
-    margin-top: 20px;
-}
-
-.about-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
+.cart-item .price {
+    font-weight: bold;
+} 
+ 
+  .cart-icon {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	
+  }
+  
+  .cart-icon img {
+	width: 100%;
+	height: auto;
+	background-color: rgb(146, 129, 129);
+  }
+  
+  .cart-count {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: #FF4C4C;
+	color: white;
+	font-size: 12px;
+	font-weight: bold;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  
 
 /* För att centrera knappen i sektionen */
 .order-section {
-    text-align: center; /* Centrera knappen horisontellt */
+    text-align: center;
     margin: 50px 0;
 }
-
-#order-button {
-    padding: 15px 30px;
-    font-size: 1.5em;
-    background-color: #FFD700; /* Gold background color */
-    color: black;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow to make it stand out */
-    margin: 0 auto; /* Detta centrerar knappen i dess förälder */
-    display: block; /* Gör knappen till ett block-element för att tillåta centrering */
-}
-
-
-#order-button:hover {
-    background-color: #FFA500; /* Lighter gold when hovered */
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
-}
-
-
