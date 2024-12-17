@@ -30,7 +30,7 @@ async function getApiKey() {						// asynchronous, väntar på svar ifrån serve
 
 
 
-// Funktion för att skapa en tenant (lägga till din användare)
+// Funktion för att skapa en tenant
 async function skapaTenant(apiKey) {
     const uniqueName = 'Mr.Rami' + Date.now();  // Skapa ett unikt namn baserat på tiden
     const bodyToSend = { name: uniqueName };  // Använd unikt namn för varje tenant

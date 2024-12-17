@@ -29,7 +29,7 @@ body {
   }
   
   .menu-category {
-	background-color: rgb(110, 110, 110);
+	background-color: #605858;
 	padding: 15px;
 	margin-bottom: 10px;
 	border-radius: 8px;
@@ -37,7 +37,7 @@ body {
   }
 
   .menu-category.selected {
-    background-color: rgb(73, 73, 73);
+    background-color: #353131;
     color: #fff;
     transition: background-color 0.3s ease;
 }
@@ -84,7 +84,7 @@ body {
 
   
   .sauce-button.selected {
-	background-color: rgb(73, 73, 73);
+	background-color: #353131;
     color: #fff;
     transition: background-color 0.3s ease;
 
@@ -187,7 +187,7 @@ select.product-quantity {
   }
 
   .drink-button.selected {
-	background-color: rgb(73, 73, 73);
+	background-color: #353131;
 	color: #fff;
 	transition: background-color 0.3s ease;
 	}
