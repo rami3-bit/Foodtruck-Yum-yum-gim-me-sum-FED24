@@ -31,9 +31,28 @@ body {
   .menu-category {
 	background-color: #605858;
 	padding: 15px;
-	margin-bottom: 10px;
-	border-radius: 8px;
 	cursor: pointer;
+	border-bottom: 1px dashed grey;
+  }
+
+  .menu-category-bottom {
+	background-color: #605858;
+	padding: 15px;
+	cursor: pointer;
+	border-bottom: 1px dashed grey;
+	border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+  }
+
+  .menu-category-top {
+	background-color: #605858;
+	padding: 15px;
+	cursor: pointer;
+	border-bottom: 1px dashed grey;
+	border-top-left-radius: 8px; /* Rundning i vänstra bottenhörnet */
+    border-top-right-radius: 8px; /* Rundning i högra bottenhörnet */
+
   }
 
   .menu-title {
