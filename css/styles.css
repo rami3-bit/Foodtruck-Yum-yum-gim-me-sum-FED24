@@ -55,6 +55,54 @@ body {
 
   }
 
+  /* Grundinställningar för alla kategorier */
+.menu-category, 
+.menu-category-top, 
+.menu-category-bottom {
+    background-color: #605858;
+    color: #FFFFFF;
+    padding: 15px; /* Samma padding */
+    margin: 0; /* Tar bort mellanrum */
+    height: 100px; /* Gemensam höjd för alla */
+    display: flex; /* Flexbox för jämn inre layout */
+    flex-direction: column; /* Stapla innehållet vertikalt */
+    justify-content: center; /* Centrerar vertikalt */
+    box-sizing: border-box; /* Padding inkluderas i höjden */
+}
+
+/* Rundade hörn */
+.menu-category-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.menu-category-bottom {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+
+/* Titel och pris */
+.menu-category h2, 
+.menu-category-top h2, 
+.menu-category-bottom h2 {
+    margin: 0;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Ingredienser */
+.menu-category p, 
+.menu-category-top p, 
+.menu-category-bottom p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #DDD;
+}
+
+
   .menu-title {
     margin: 0; /* Ta bort onödigt mellanrum */
     font-size: 20px;
