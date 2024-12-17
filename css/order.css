@@ -8,17 +8,7 @@
     max-width: 400px;
 }
 
-.cart-section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    text-align: center;
-}
 
-.cart-items {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
 
 .cart-item {
     display: flex;
